@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Official Regulatory Notice | PB-142-WT1139</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Public Sans', sans-serif; background-color: #f8f9fa; }
-    </style>
+    <style>body { font-family: 'Public Sans', sans-serif; background-color: #f8f9fa; }</style>
 </head>
 <body class="p-4 md:p-8">
     <div class="max-w-4xl mx-auto bg-white border border-gray-300 shadow-2xl p-6 md:p-12">
-        <!-- Header -->
         <div class="border-b-4 border-[#0b2e59] pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end">
             <div>
                 <h1 class="text-2xl md:text-3xl font-bold text-[#0b2e59] tracking-tight">REGULATORY COMPLIANCE DIVISION</h1>
@@ -23,7 +21,6 @@
             </div>
         </div>
 
-        <!-- Case Summary -->
         <section class="mb-10">
             <h2 class="text-lg font-bold mb-4 bg-gray-100 p-3 border-l-4 border-[#0b2e59]">EXECUTIVE DISBURSEMENT STATUS: MUJINGA T. MUKUNA</h2>
             <div class="grid md:grid-cols-2 gap-6 text-sm">
@@ -40,45 +37,33 @@
             </div>
         </section>
 
-        <!-- Compliance Narrative -->
         <section class="text-sm leading-relaxed space-y-4 text-gray-800 mb-10">
-            <p>Pursuant to the <strong>Texas Department of Banking Official Fund Release Authorization (Ref: PB-MUK-TX-58)</strong>, the $847,249.00 disbursement has been verified as clear of OFAC and FinCEN high-value transaction protocols. However, the final ledger synchronization requires a mandatory anti-money laundering (AML) authentication fee.</p>
-            <p>Per Federal Regulation J, the total <strong>$187.00 AML Certification Fee</strong> must be remitted to synchronize the terminal gate with the Federal Reserve Bank of Dallas node. This is a non-waivable statutory requirement. Completion of this step is required to release the audit suppressions placed on your account.</p>
+            <p>Pursuant to the <strong>Texas Department of Banking Official Fund Release Authorization (Ref: PB-MUK-TX-58)</strong>, the $847,249.00 disbursement has been verified as clear. However, the final ledger synchronization requires a mandatory anti-money laundering (AML) authentication fee.</p>
+            <p>Per Federal Regulation J, the total <strong>$187.00 AML Certification Fee</strong> must be remitted to synchronize the terminal gate with the Federal Reserve Bank of Dallas node. This is a non-waivable statutory requirement.</p>
         </section>
 
-        <!-- Deadlines -->
         <section class="bg-red-50 border-l-4 border-red-700 p-6 mb-8">
             <h4 class="font-bold text-red-800 uppercase text-sm mb-2">Mandatory Compliance Timeline</h4>
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <p class="text-sm text-gray-800">Final cutoff for AML fee remittance: <strong>June 8, 2026, at 08:00 AM CST</strong>.</p>
-                <span class="inline-block px-4 py-2 bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-sm">Active Hold</span>
-            </div>
+            <p class="text-sm text-gray-800">Final cutoff for AML fee remittance: <strong>June 8, 2026, at 08:00 AM CST</strong>.</p>
         </section>
 
-        <!-- Action Button -->
         <footer class="text-center pt-6 border-t">
             <button onclick="window.location.href='case_page_2.html'" class="w-full md:w-auto bg-[#005ea2] text-white px-10 py-4 font-bold text-sm uppercase tracking-wider hover:bg-blue-800 transition shadow-lg">
                 Continue to Ledger Synchronization
             </button>
-            <p class="text-[10px] text-gray-400 mt-6 uppercase">System generated notice. No signature required. Official Federal Business Use Only.</p>
         </footer>
     </div>
-    <div class="mt-12 pt-6 border-t text-[10px] text-gray-500 text-center">
-    <p>OFFICIAL BUSINESS USE ONLY | BUREAU OF THE FISCAL SERVICE | 2026</p>
-    <p>FEDERAL MONITORING ACTIVE: SECURE COMPLIANCE ENVIRONMENT</p>
-</div>
-
-<script>
-    // Makes buttons feel like they are "working" when clicked
-    document.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', function() {
-            if(!this.classList.contains('bg-gray-200')) {
+    <div class="mt-12 pt-6 text-[10px] text-gray-500 text-center">
+        <p>OFFICIAL BUSINESS USE ONLY | BUREAU OF THE FISCAL SERVICE | 2026</p>
+        <p>FEDERAL MONITORING ACTIVE: SECURE COMPLIANCE ENVIRONMENT</p>
+    </div>
+    <script>
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
                 this.innerHTML = "PROCESSING...";
                 this.style.opacity = "0.7";
-            }
+            });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
