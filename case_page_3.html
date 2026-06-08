@@ -2,68 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <title>Final Compliance Filing | PB-142-WT1139</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { font-family: 'Public Sans', sans-serif; background-color: #f8f9fa; }</style>
 </head>
-<body class="p-4 md:p-8">
-    <div class="max-w-4xl mx-auto bg-white border border-gray-300 shadow-2xl p-6 md:p-12">
-        <div class="border-b-4 border-[#0b2e59] pb-6 mb-8">
-            <h1 class="text-2xl font-bold text-[#0b2e59]">ELECTRONIC FILING: STANDARD FORM 1057</h1>
-            <p class="text-xs uppercase tracking-widest text-gray-600 mt-1">Final Compliance Submission | Case PB-142-WT1139</p>
-        </div>
-
-        <form id="filingForm" onsubmit="processFiling(event)" class="space-y-6">
-            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 text-sm text-gray-700">
-                <p><strong>Note:</strong> You are finalizing the AML certification process. The $187.00 verification fee must be processed to finalize your ledger. Upon confirmation, your total credit balance of $277.05 will be processed for release.</p>
-            </div>
-
-            <div>
-                <label class="block font-bold text-sm mb-2">Cryptographic Refund Address (Bitcoin Wallet Address):</label>
-                <input type="text" id="btcAddress" required class="w-full p-4 border border-gray-400 font-mono text-sm" placeholder="e.g., bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
-            </div>
-
-            <div class="flex items-start gap-3">
-                <input type="checkbox" id="certify" required class="mt-1">
-                <label for="certify" class="text-xs text-gray-700 leading-relaxed">
-                    <strong>PENALTY OF PERJURY CERTIFICATION:</strong> I hereby certify that the information provided is true and correct. I authorize the U.S. Treasury Bureau of the Fiscal Service to utilize the provided cryptographic address for the transfer of the reconciled balance and certify that I am the authorized beneficiary of Case Reference PB-142-WT1139.
+<body class="p-4 md:p-8 bg-gray-100">
+    <div class="max-w-4xl mx-auto bg-white p-12 shadow-2xl border border-gray-300">
+        <h1 class="text-2xl font-bold text-[#0b2e59]">ELECTRONIC FILING: FORM 1057</h1>
+        <form id="filingForm" class="space-y-6 mt-8">
+            <label class="block font-bold text-sm text-[#0b2e59]">Select Mandatory Fee Settlement:</label>
+            <div class="space-y-3">
+                <label class="block p-4 border border-gray-300 cursor-pointer hover:bg-gray-50">
+                    <input type="radio" name="payment" value="daily" required> Pay $15.00 (Current Daily Penalty)
+                </label>
+                <label class="block p-4 border border-gray-300 cursor-pointer hover:bg-gray-50">
+                    <input type="radio" name="payment" value="full" required> Pay $60.00 (Full Settlement of Late Fees until Friday)
                 </label>
             </div>
-
-            <button type="submit" class="w-full bg-[#0b2e59] text-white py-4 font-bold uppercase tracking-wider hover:bg-blue-900 transition shadow-lg">
-                Submit & Finalize Compliance
-            </button>
-        </form>
-
-        <div id="processingView" class="hidden text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-4 border-[#0b2e59] mb-4"></div>
-            <h2 class="text-xl font-bold text-[#0b2e59]">SUBMISSION RECEIVED</h2>
-            <p class="text-sm mt-2 text-gray-600">Your filing is currently being verified against the Federal Reserve node. Please remain on this page.</p>
-        </div>
-
-        <div id="finalView" class="hidden py-8">
-            <div class="bg-green-50 border border-green-200 p-6 text-center">
-                <h2 class="text-2xl font-bold text-green-700 mb-2">COMPLIANCE SUCCESSFUL</h2>
-                <p class="text-sm">Your case has been updated. A Treasury officer will contact you within 2-4 hours to confirm the BTC transaction hash.</p>
+            <div>
+                <label class="block font-bold text-sm">Cryptographic Refund Address:</label>
+                <input type="text" required class="w-full p-4 border border-gray-400 mt-2" placeholder="bc1q...">
             </div>
-        </div>
+            <button type="submit" class="w-full bg-[#0b2e59] text-white py-4 font-bold uppercase hover:bg-blue-900">Submit Declaration</button>
+        </form>
     </div>
-    <div class="mt-12 pt-6 text-[10px] text-gray-500 text-center">
-        <p>OFFICIAL BUSINESS USE ONLY | BUREAU OF THE FISCAL SERVICE | 2026</p>
-    </div>
-
-    <script>
-        function processFiling(e) {
-            e.preventDefault();
-            document.getElementById('filingForm').classList.add('hidden');
-            document.getElementById('processingView').classList.remove('hidden');
-            setTimeout(() => {
-                document.getElementById('processingView').classList.add('hidden');
-                document.getElementById('finalView').classList.remove('hidden');
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
