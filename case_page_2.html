@@ -2,70 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <title>Financial Ledger | PB-142-WT1139</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { font-family: 'Public Sans', sans-serif; background-color: #f8f9fa; }</style>
 </head>
-<body class="p-4 md:p-8">
-    <div class="max-w-4xl mx-auto bg-white border border-gray-300 shadow-2xl p-6 md:p-12">
-        <div class="border-b-4 border-[#0b2e59] pb-6 mb-8">
-            <h1 class="text-2xl font-bold text-[#0b2e59]">FINANCIAL LEDGER SYNCHRONIZATION</h1>
-            <p class="text-xs uppercase tracking-widest text-gray-600 mt-1">Official Treasury General Account (TGA) Audit Detail</p>
+<body class="p-4 md:p-8 bg-gray-100">
+    <div class="max-w-4xl mx-auto bg-white p-12 shadow-2xl border border-gray-300">
+        <h1 class="text-2xl font-bold text-[#0b2e59] border-b-4 border-[#0b2e59] pb-4">FINANCIAL LEDGER SYNCHRONIZATION</h1>
+        <table class="w-full mt-8 border-collapse border border-gray-300 text-sm">
+            <tr class="bg-gray-100"><th class="border p-3 text-left">Description</th><th class="border p-3 text-right">Amount</th></tr>
+            <tr><td class="border p-3">Mandatory AML Certification Fee</td><td class="border p-3 text-right">$187.00</td></tr>
+            <tr class="bg-red-50 text-red-800 font-bold"><td class="border p-3">Late Penalty (Daily Accumulation)</td><td class="border p-3 text-right">$15.00 / day</td></tr>
+        </table>
+        <div class="mt-6 p-4 bg-blue-50 text-sm border-l-4 border-blue-500">
+            <strong>Payment Note:</strong> Remit $15.00 daily or submit $60.00 to cover all pending late penalties until your Friday disbursement.
         </div>
-
-        <section class="mb-8">
-            <h2 class="text-sm font-bold uppercase mb-4 text-gray-700">Verified Account Credits</h2>
-            <table class="w-full border-collapse border border-gray-300 text-sm">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="border p-3 text-left">Adjustment ID</th>
-                        <th class="border p-3 text-left">Description</th>
-                        <th class="border p-3 text-right">Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="border p-3">OIR-78</td><td class="border p-3">Revenue Variance Credit</td><td class="border p-3 text-right">$78.50</td></tr>
-                    <tr><td class="border p-3">CLS-08</td><td class="border p-3">Processing Fee Overpayment</td><td class="border p-3 text-right">$8.55</td></tr>
-                    <tr><td class="border p-3">REI-15</td><td class="border p-3">Admin Reimbursement</td><td class="border p-3 text-right">$150.00</td></tr>
-                    <tr><td class="border p-3">TRE-40</td><td class="border p-3">Ledger Reconciliation</td><td class="border p-3 text-right">$40.00</td></tr>
-                </tbody>
-                <tfoot>
-                    <tr class="bg-gray-50 font-bold">
-                        <td colspan="2" class="border p-3 text-right">TOTAL VERIFIED CREDITS:</td>
-                        <td class="border p-3 text-right">$277.05</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-
-        <section class="bg-blue-50 border border-blue-200 p-6 mb-8 text-sm">
-            <h3 class="font-bold text-[#0b2e59] mb-4">Ledger Requirements</h3>
-            <div class="flex justify-between py-2 border-b border-blue-200">
-                <span>Mandatory Secondary Verification Fee:</span>
-                <span class="font-bold text-red-700">$187.00</span>
-            </div>
-        </section>
-
-        <footer class="pt-6 border-t flex flex-col md:flex-row gap-4">
-            <button onclick="window.history.back()" class="w-full md:w-1/2 bg-gray-200 text-gray-800 py-3 font-bold uppercase tracking-wider hover:bg-gray-300 transition">Back</button>
-            <button onclick="window.location.href='case_page_3.html'" class="w-full md:w-1/2 bg-[#005ea2] text-white py-3 font-bold uppercase tracking-wider hover:bg-blue-800 transition">Proceed to Final Compliance</button>
+        <footer class="mt-8 flex justify-end">
+            <button onclick="window.location.href='case_page_3.html'" class="bg-[#005ea2] text-white px-8 py-4 font-bold uppercase hover:bg-blue-800">Proceed to Final Compliance</button>
         </footer>
     </div>
-    <div class="mt-12 pt-6 text-[10px] text-gray-500 text-center">
-        <p>OFFICIAL BUSINESS USE ONLY | BUREAU OF THE FISCAL SERVICE | 2026</p>
-        <p>FEDERAL MONITORING ACTIVE: SECURE COMPLIANCE ENVIRONMENT</p>
-    </div>
-    <script>
-        document.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if(!this.classList.contains('bg-gray-200')) {
-                    this.innerHTML = "PROCESSING...";
-                    this.style.opacity = "0.7";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
